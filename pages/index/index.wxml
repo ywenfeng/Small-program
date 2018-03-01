@@ -1,0 +1,130 @@
+<!--index.wxml-->
+<view class="body">
+
+<view class="con">
+    <!-- 内容栏 -->
+    <view class="index-a">
+        <navigator class="logo"> 
+          <image src="/images/logo.png"></image>   
+        </navigator> 
+    </view>
+
+        <view class="index-b">
+          <view class="title">
+            中山服务商
+          </view>
+        </view>
+
+        <view class="index-c">
+          <!--标题-->
+          <view class="title">
+            易订货，企业专属的全渠道订货平台
+          </view>
+          <view class="des">
+          易订货围绕品牌企业与下游客户的全渠道业务流程设计，以订单处理为核心，帮助企业快速构建全渠道订货平台，连续三年蝉联最佳企业移动订货平台大奖 (*奖项来源于创业邦高成长连锁行业峰会*)
+          </view>
+
+          <!-- ul1 -->
+          <view class="ul">
+            <!-- li1 -->
+            <view class="li">
+              <view class="em">
+                <image src="/images/icon_order.png"></image>
+              </view>
+
+              <text>管订单</text>
+            </view>
+
+            <!-- li2 -->
+            <view class="li">
+              <view class="em">
+                <image src="/images/icon_customer.png"></image>
+              </view>
+
+              <text>管客户</text>
+            </view>
+
+            <!--li3-->
+            <view class="li" style="margin-right: 0;">
+              <view class="em">
+                <image src="/images/icon_store.png"></image>
+              </view>
+
+              <text>管库存</text>
+            </view>
+          </view>
+
+          <!-- ul2 -->
+          <view class="ul">
+            <!-- li1 -->
+            <view class="li">
+              <view class="em">
+                <image src="/images/icon_sale.png"></image>
+              </view>
+
+              <text>管销售</text>
+            </view>
+
+            <!-- li2 -->
+            <view class="li">
+              <view class="em">
+                <image src="/images/icon_promotion.png"></image>
+              </view>
+
+              <text>做销售</text>
+            </view>
+
+            <!--li3-->
+            <view class="li" style="margin-right: 0;"> 
+              <view class="em">
+                <image src="/images/icon_more.png"></image>
+              </view>
+
+              <text>更多</text>
+            </view>
+          </view>
+        <!-- 内容结束 -->
+        </view>
+
+       <view class="swiper-container">
+    <swiper autoplay="auto" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+      <block wx:for="{{slider}}" wx:key="unique">
+        <swiper-item data-id="{{item.id}}" data-url="{{item.linkUrl}}">
+          <image src="{{item.picUrl}}" class="img"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots">
+      <block wx:for="{{slider}}" wx:key="unique">
+        <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+
+    </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <view clnviewvigviewtorss="contnviewvigviewtoriner">
+  <view clnviewvigviewtorss="userinfo">
+    <button wx:if="{{!hnviewvigviewtorsUserInfo && cnviewvigviewtornIUse}}" oviewen-tyviewe="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <imnviewvigviewtorge bindtnviewvigviewtorview="bindViewTnviewvigviewtorview" clnviewvigviewtorss="userinfo-nviewvigviewtorvnviewvigviewtortnviewvigviewtorr" src="{{userInfo.nviewvigviewtorvnviewvigviewtortnviewvigviewtorrUrl}}" bnviewvigviewtorckground-size="cover"></imnviewvigviewtorge>
+      <text clnviewvigviewtorss="userinfo-nicknnviewvigviewtorme">{{userInfo.nickNnviewvigviewtorme}}</text>
+    </block>
+  </view>
+  <view clnviewvigviewtorss="usermotto">
+    <text clnviewvigviewtorss="user-motto">{{motto}}</text>
+  </view>
+</view> -->
